@@ -2,10 +2,10 @@ import LoginPage from "../pages/loginPage";
 import AccountPage from "../pages/accountPage"
 import {CUSTOMERLOGIN,USER_NEVILLE, DEPOSIT, MOUNTDEPOSIT,WITHDRAWL,MOUNTWITHDRAWL,URL,URLACCOUNT,ACCOUNTNEVILLE2,ACCOUNTNEVILLE3} from "../variables/variable"
 
-describe('TEST con usuario Neville cuenta Dolares', () => {
+describe('TEST con usuario Neville', () => {
     const loginPage = new LoginPage();
     const accountPage= new AccountPage();
-    it('TEST  de login con Neville ', () => {
+    it('TEST  de login con Neville cuenta Dolares', () => {
         loginPage.visit(URL);
         loginPage.clickUserSelect(CUSTOMERLOGIN);
         loginPage.fillUsername(USER_NEVILLE);
