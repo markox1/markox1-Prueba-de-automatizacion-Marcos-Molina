@@ -20,3 +20,6 @@ export const ACCOUNTALBUS2= "number:1011";
 export const ACCOUNTALBUS3= "number:1012";
 export const ACCOUNTNEVILLE2= "number:1014";
 export const ACCOUNTNEVILLE3= "number:1015";
+export const CUSTOMERLOGIN="Customer Login";
+export const BANKMANAGERLOGIN="Bank Manager Login";
+export const ADDCUSTOMER="Add Customer";

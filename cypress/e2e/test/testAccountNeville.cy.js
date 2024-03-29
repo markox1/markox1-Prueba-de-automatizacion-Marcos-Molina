@@ -1,14 +1,14 @@
 import LoginPage from "../pages/loginPage";
 import AccountPage from "../pages/accountPage"
-import {USER_HERMOINE, DEPOSIT, MOUNTDEPOSIT,WITHDRAWL,MOUNTWITHDRAWL,URL,URLACCOUNT,ACCOUNTHERMOINE2,ACCOUNTHERMOINE3} from "../variables/variable"
+import {CUSTOMERLOGIN,USER_NEVILLE, DEPOSIT, MOUNTDEPOSIT,WITHDRAWL,MOUNTWITHDRAWL,URL,URLACCOUNT,ACCOUNTNEVILLE2,ACCOUNTNEVILLE3} from "../variables/variable"
 
-describe('TEST con usuario Hermoine cuenta Dolares', () => {
+describe('TEST con usuario Neville cuenta Dolares', () => {
     const loginPage = new LoginPage();
     const accountPage= new AccountPage();
-    it('TEST  de login con Hermoine ', () => {
+    it('TEST  de login con Neville ', () => {
         loginPage.visit(URL);
-        loginPage.clickUserSelect();
-        loginPage.fillUsername(USER_HERMOINE);
+        loginPage.clickUserSelect(CUSTOMERLOGIN);
+        loginPage.fillUsername(USER_NEVILLE);
         loginPage.clickLoginButton();
         accountPage.clickButtonByText(DEPOSIT);
         accountPage.clickAmount(MOUNTDEPOSIT);
@@ -19,12 +19,12 @@ describe('TEST con usuario Hermoine cuenta Dolares', () => {
         accountPage.clickBtnSubmit(); 
        
     });
-    it('TEST de cambio de cuenta de Hermoine POUND', () => {
+    it('TEST de cambio de cuenta de Neville POUND', () => {
         loginPage.visit(URLACCOUNT);
-        loginPage.clickUserSelect();
-        loginPage.fillUsername(USER_HERMOINE);
+        loginPage.clickUserSelect(CUSTOMERLOGIN);
+        loginPage.fillUsername(USER_NEVILLE);
         loginPage.clickLoginButton();
-        accountPage.clickAccountOfUser(ACCOUNTHERMOINE2);
+        accountPage.clickAccountOfUser(ACCOUNTNEVILLE2);
         accountPage.clickButtonByText(DEPOSIT);
         accountPage.clickAmount(MOUNTDEPOSIT);
         accountPage.clickBtnSubmit();
@@ -33,12 +33,12 @@ describe('TEST con usuario Hermoine cuenta Dolares', () => {
         accountPage.clickAmount(MOUNTWITHDRAWL);
         accountPage.clickBtnSubmit(); 
     });
-    it('TEST de cambio de cuenta de Hermoine RUPEE', () => {
+    it('TEST de cambio de cuenta de Neville RUPEE', () => {
         loginPage.visit(URLACCOUNT);
-        loginPage.clickUserSelect();
-        loginPage.fillUsername(USER_HERMOINE);
+        loginPage.clickUserSelect(CUSTOMERLOGIN);
+        loginPage.fillUsername(USER_NEVILLE);
         loginPage.clickLoginButton();
-        accountPage.clickAccountOfUser(ACCOUNTHERMOINE2);
+        accountPage.clickAccountOfUser(ACCOUNTNEVILLE3);
         accountPage.clickButtonByText(DEPOSIT);
         accountPage.clickAmount(MOUNTDEPOSIT);
         accountPage.clickBtnSubmit();

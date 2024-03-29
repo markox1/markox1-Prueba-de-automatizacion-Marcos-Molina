@@ -3,8 +3,8 @@ class LoginPage {
     visit() {
       cy.visit(URL);
     }
-    clickUserSelect(){
-        cy.contains('Customer Login').click()
+    clickUserSelect(CUSTOMERLOGIN){
+        cy.contains(CUSTOMERLOGIN).click()
     }
     fillUsername(user) {
         cy.get('#userSelect').select(user);
@@ -12,6 +12,7 @@ class LoginPage {
       clickLoginButton(){
         cy.contains('Login').click();
       }
+
       
       
 }
