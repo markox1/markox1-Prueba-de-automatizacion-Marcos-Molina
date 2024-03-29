@@ -1,0 +1,22 @@
+{
+  "name": "cypres-e2e",
+  "version": "1.0.0",
+  "description": "E2E TESTING",
+  "main": "test",
+  "scripts": {
+    "test": "test",
+    "cypress:open": "cypress open"
+  },
+  "keywords": [
+    "testing",
+    "e2e",
+    "automation",
+    "framework",
+    "cypress"
+  ],
+  "author": "markox",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.7.1"
+  }
+}
