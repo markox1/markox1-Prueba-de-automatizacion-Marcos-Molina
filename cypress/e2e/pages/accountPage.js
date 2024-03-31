@@ -1,4 +1,5 @@
 import {URL} from "../variables/variable"
+
 class AccountPage {
     clickButtonByText(buttonText){
         cy.contains(buttonText).click()
@@ -16,5 +17,9 @@ class AccountPage {
       clickAccountOfUser(account){
         cy.get('#accountSelect').select(account)
       }
+      assertTransactionSuccessful(successfull){
+        cy.get('.error').should('have.text', successfull);
+      }
+      
 }
 export default AccountPage;  

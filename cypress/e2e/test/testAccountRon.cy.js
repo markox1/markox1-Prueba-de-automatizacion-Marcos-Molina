@@ -1,6 +1,6 @@
 import LoginPage from "../pages/loginPage";
 import AccountPage from "../pages/accountPage"
-import {CUSTOMERLOGIN,USER_RON, DEPOSIT, MOUNTDEPOSIT,WITHDRAWL,MOUNTWITHDRAWL,URL,URLACCOUNT,ACCOUNTRON2,ACCOUNTRON3} from "../variables/variable"
+import {TRASACTIONSUCCESSFUL,DEPOSITSUCCESSFUL,CUSTOMERLOGIN,USER_RON, DEPOSIT, MOUNTDEPOSIT,WITHDRAWL,MOUNTWITHDRAWL,URL,URLACCOUNT,ACCOUNTRON2,ACCOUNTRON3} from "../variables/variable"
 
 describe('TEST con usuario Ron', () => {
     const loginPage = new LoginPage();
@@ -13,10 +13,12 @@ describe('TEST con usuario Ron', () => {
         accountPage.clickButtonByText(DEPOSIT);
         accountPage.clickAmount(MOUNTDEPOSIT);
         accountPage.clickBtnSubmit();
+        accountPage.assertTransactionSuccessful(DEPOSITSUCCESSFUL);
         accountPage.clickButtonByText(WITHDRAWL);
         accountPage.await();
         accountPage.clickAmount(MOUNTWITHDRAWL);
-        accountPage.clickBtnSubmit(); 
+        accountPage.clickBtnSubmit();
+        accountPage.assertTransactionSuccessful(TRASACTIONSUCCESSFUL);
        
     });
     it('TEST de cambio de cuenta de Ron POUND', () => {
@@ -28,10 +30,12 @@ describe('TEST con usuario Ron', () => {
         accountPage.clickButtonByText(DEPOSIT);
         accountPage.clickAmount(MOUNTDEPOSIT);
         accountPage.clickBtnSubmit();
+        accountPage.assertTransactionSuccessful(DEPOSITSUCCESSFUL);
         accountPage.clickButtonByText(WITHDRAWL);
         accountPage.await();
         accountPage.clickAmount(MOUNTWITHDRAWL);
-        accountPage.clickBtnSubmit(); 
+        accountPage.clickBtnSubmit();
+        accountPage.assertTransactionSuccessful(TRASACTIONSUCCESSFUL);
     });
     it('TEST de cambio de cuenta de Ron RUPEE', () => {
         loginPage.visit(URLACCOUNT);
@@ -42,10 +46,12 @@ describe('TEST con usuario Ron', () => {
         accountPage.clickButtonByText(DEPOSIT);
         accountPage.clickAmount(MOUNTDEPOSIT);
         accountPage.clickBtnSubmit();
+        accountPage.assertTransactionSuccessful(DEPOSITSUCCESSFUL);
         accountPage.clickButtonByText(WITHDRAWL);
         accountPage.await();
         accountPage.clickAmount(MOUNTWITHDRAWL);
-        accountPage.clickBtnSubmit(); 
+        accountPage.clickBtnSubmit();
+        accountPage.assertTransactionSuccessful(TRASACTIONSUCCESSFUL);
     });
     
 })

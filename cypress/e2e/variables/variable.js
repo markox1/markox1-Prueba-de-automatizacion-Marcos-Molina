@@ -26,7 +26,10 @@ export const BANKMANAGERLOGIN="Bank Manager Login";
 export const ADDCUSTOMER="Add Customer";
 export const OPENACCOUNT="Open Account";
 export const USER_NEW_ACCOUNTDOLLAR="Dollar";
-export const DELETECUSTOMER="Customers"
+export const DELETECUSTOMER="Customers";
+export const TRASACTIONSUCCESSFUL="Transaction successful";
+export const DEPOSITSUCCESSFUL="Deposit Successful";
+
 
 
 

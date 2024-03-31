@@ -30,5 +30,9 @@ class NewUserPage{
         // Se elimina el nuevo customer
         cy.get(':nth-child(6) > :nth-child(5) > button').click();
       }
+      clickHome(){
+        cy.get('.home').click();
+      }
+
 }
 export default NewUserPage;
