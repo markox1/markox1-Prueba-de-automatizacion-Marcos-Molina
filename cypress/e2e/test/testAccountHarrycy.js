@@ -5,7 +5,7 @@ import {CUSTOMERLOGIN,USER_HARRY, DEPOSIT, MOUNTDEPOSIT,WITHDRAWL,MOUNTWITHDRAWL
 describe('TEST con usuario Harry', () => {
     const loginPage = new LoginPage();
     const accountPage= new AccountPage();
-    it('TEST  de login con Harry ', () => {
+    it('TEST  de login con Harry cuenta Dolares', () => {
         loginPage.visit(URL);
         loginPage.clickUserSelect(CUSTOMERLOGIN);
         loginPage.fillUsername(USER_HARRY);

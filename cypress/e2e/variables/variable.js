@@ -3,6 +3,7 @@ export const USER_HARRY=2;
 export const USER_RON=3;
 export const USER_ALBUS=4;
 export const USER_NEVILLE=5;
+export const USER_NEW=6;
 export const DEPOSIT="Deposit";
 export const MOUNTDEPOSIT=2000;
 export const WITHDRAWL="Withdrawl"
@@ -23,3 +24,9 @@ export const ACCOUNTNEVILLE3= "number:1015";
 export const CUSTOMERLOGIN="Customer Login";
 export const BANKMANAGERLOGIN="Bank Manager Login";
 export const ADDCUSTOMER="Add Customer";
+export const OPENACCOUNT="Open Account";
+export const USER_NEW_ACCOUNTDOLLAR="Dollar";
+export const DELETECUSTOMER="Customers"
+
+
+

@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-31T01:13:10.222Z",
+    "end": "2024-03-31T01:13:26.648Z",
+    "duration": 16426,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "47acbacc-e05d-43da-901a-dca715a1eac8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\test\\testAccountAlbus.cy.js",
+      "file": "cypress\\e2e\\test\\testAccountAlbus.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "507e88a4-e384-4cdb-82c4-9f6d2fb42dfe",
+          "title": "TEST con usuario Albus",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TEST  de login con Albus cuenta Dolares",
+              "fullTitle": "TEST con usuario Albus TEST  de login con Albus cuenta Dolares",
+              "timedOut": null,
+              "duration": 5069,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.visit(_variable.URL);\nloginPage.clickUserSelect(_variable.CUSTOMERLOGIN);\nloginPage.fillUsername(_variable.USER_ALBUS);\nloginPage.clickLoginButton();\naccountPage.clickButtonByText(_variable.DEPOSIT);\naccountPage.clickAmount(_variable.MOUNTDEPOSIT);\naccountPage.clickBtnSubmit();\naccountPage.clickButtonByText(_variable.WITHDRAWL);\naccountPage.await();\naccountPage.clickAmount(_variable.MOUNTWITHDRAWL);\naccountPage.clickBtnSubmit();",
+              "err": {},
+              "uuid": "386f9bf9-f85a-47d3-bd76-4ed90813cd51",
+              "parentUUID": "507e88a4-e384-4cdb-82c4-9f6d2fb42dfe",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TEST de cambio de cuenta de Albus POUND",
+              "fullTitle": "TEST con usuario Albus TEST de cambio de cuenta de Albus POUND",
+              "timedOut": null,
+              "duration": 4085,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.visit(_variable.URLACCOUNT);\nloginPage.clickUserSelect(_variable.CUSTOMERLOGIN);\nloginPage.fillUsername(_variable.USER_ALBUS);\nloginPage.clickLoginButton();\naccountPage.clickAccountOfUser(_variable.ACCOUNTALBUS2);\naccountPage.clickButtonByText(_variable.DEPOSIT);\naccountPage.clickAmount(_variable.MOUNTDEPOSIT);\naccountPage.clickBtnSubmit();\naccountPage.clickButtonByText(_variable.WITHDRAWL);\naccountPage.await();\naccountPage.clickAmount(_variable.MOUNTWITHDRAWL);\naccountPage.clickBtnSubmit();",
+              "err": {},
+              "uuid": "f083c407-b62d-48c9-bcf5-899a06cc4d45",
+              "parentUUID": "507e88a4-e384-4cdb-82c4-9f6d2fb42dfe",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TEST de cambio de cuenta de Albus RUPEE",
+              "fullTitle": "TEST con usuario Albus TEST de cambio de cuenta de Albus RUPEE",
+              "timedOut": null,
+              "duration": 4043,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.visit(_variable.URLACCOUNT);\nloginPage.clickUserSelect(_variable.CUSTOMERLOGIN);\nloginPage.fillUsername(_variable.USER_ALBUS);\nloginPage.clickLoginButton();\naccountPage.clickAccountOfUser(_variable.ACCOUNTALBUS3);\naccountPage.clickButtonByText(_variable.DEPOSIT);\naccountPage.clickAmount(_variable.MOUNTDEPOSIT);\naccountPage.clickBtnSubmit();\naccountPage.clickButtonByText(_variable.WITHDRAWL);\naccountPage.await();\naccountPage.clickAmount(_variable.MOUNTWITHDRAWL);\naccountPage.clickBtnSubmit();",
+              "err": {},
+              "uuid": "5e5e6d07-d3ee-4e2d-a12b-cf53d5decafa",
+              "parentUUID": "507e88a4-e384-4cdb-82c4-9f6d2fb42dfe",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "386f9bf9-f85a-47d3-bd76-4ed90813cd51",
+            "f083c407-b62d-48c9-bcf5-899a06cc4d45",
+            "5e5e6d07-d3ee-4e2d-a12b-cf53d5decafa"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13197,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

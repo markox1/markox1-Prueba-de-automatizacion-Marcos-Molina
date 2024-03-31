@@ -1,0 +1,149 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-31T01:13:28.320Z",
+    "end": "2024-03-31T01:13:36.267Z",
+    "duration": 7947,
+    "testsRegistered": 3,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "72c99e21-f51e-4f59-a23b-d58beadb0a59",
+      "title": "",
+      "fullFile": "cypress\\e2e\\test\\testAccountHermoine.cy.js",
+      "file": "cypress\\e2e\\test\\testAccountHermoine.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "99e430a8-711c-41c9-976a-88a2e3e0a909",
+          "title": "TEST con usuario Hermoine",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TEST  de login con Hermoine cuenta Dolares",
+              "fullTitle": "TEST con usuario Hermoine TEST  de login con Hermoine cuenta Dolares",
+              "timedOut": null,
+              "duration": 4524,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.visit(_variable.URL);\nloginPage.clickUserSelect(_variable.CUSTOMERLOGIN);\nloginPage.fillUsername(_variable.USER_HERMOINE);\nloginPage.clickLoginButton();\naccountPage.clickButtonByText(_variable.DEPOSIT);\naccountPage.clickAmount(_variable.MOUNTDEPOSIT);\naccountPage.clickBtnSubmit();\naccountPage.clickButtonByText(_variable.WITHDRAWL);\naccountPage.await();\naccountPage.clickAmount(_variable.MOUNTWITHDRAWL);\naccountPage.clickBtnSubmit();",
+              "err": {},
+              "uuid": "00094734-1ca9-4fc1-a86c-121b61e56933",
+              "parentUUID": "99e430a8-711c-41c9-976a-88a2e3e0a909",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TEST de cambio de cuenta de Hermoine POUND",
+              "fullTitle": "TEST con usuario Hermoine TEST de cambio de cuenta de Hermoine POUND",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.visit(_variable.URLACCOUNT);\nloginPage.clickUserSelect(_variable.CUSTOMERLOGIN);\nloginPage.fillUsername(_variable.USER_HERMOINE);\nloginPage.clickLoginButton();\naccountPage.clickAccountOfUser(_variable.ACCOUNTHERMOINE2);\naccountPage.clickButtonByText(_variable.DEPOSIT);\naccountPage.clickAmount(_variable.MOUNTDEPOSIT);\naccountPage.clickBtnSubmit();\naccountPage.clickButtonByText(_variable.WITHDRAWL);\naccountPage.await();\naccountPage.clickAmount(_variable.MOUNTWITHDRAWL);\naccountPage.clickBtnSubmit();",
+              "err": {},
+              "uuid": "6cde7555-9a7a-43bd-bfae-b76c8a893e99",
+              "parentUUID": "99e430a8-711c-41c9-976a-88a2e3e0a909",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "TEST de cambio de cuenta de Hermoine RUPEE",
+              "fullTitle": "TEST con usuario Hermoine TEST de cambio de cuenta de Hermoine RUPEE",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.visit(_variable.URLACCOUNT);\nloginPage.clickUserSelect(_variable.CUSTOMERLOGIN);\nloginPage.fillUsername(_variable.USER_HERMOINE);\nloginPage.clickLoginButton();\naccountPage.clickAccountOfUser(_variable.ACCOUNTHERMOINE2);\naccountPage.clickButtonByText(_variable.DEPOSIT);\naccountPage.clickAmount(_variable.MOUNTDEPOSIT);\naccountPage.clickBtnSubmit();\naccountPage.clickButtonByText(_variable.WITHDRAWL);\naccountPage.await();\naccountPage.clickAmount(_variable.MOUNTWITHDRAWL);\naccountPage.clickBtnSubmit();",
+              "err": {},
+              "uuid": "d544fc80-f5e4-4ea6-8336-1c9a967416b7",
+              "parentUUID": "99e430a8-711c-41c9-976a-88a2e3e0a909",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "00094734-1ca9-4fc1-a86c-121b61e56933"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "6cde7555-9a7a-43bd-bfae-b76c8a893e99",
+            "d544fc80-f5e4-4ea6-8336-1c9a967416b7"
+          ],
+          "duration": 4524,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
