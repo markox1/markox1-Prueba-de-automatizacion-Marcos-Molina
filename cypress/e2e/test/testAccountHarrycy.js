@@ -55,7 +55,7 @@ describe('TEST con usuario Harry', () => {
     it('TEST para validar que el retiro no sea mayor al deposito', () => {
         loginPage.visit(URL);
         loginPage.clickUserSelect(CUSTOMERLOGIN);
-        loginPage.fillUsername(USER_RON);
+        loginPage.fillUsername(USER_HARRY);
         loginPage.clickLoginButton();
         accountPage.clickButtonByText(WITHDRAWL);
         accountPage.clickAmount(MOUNTFAILED);
