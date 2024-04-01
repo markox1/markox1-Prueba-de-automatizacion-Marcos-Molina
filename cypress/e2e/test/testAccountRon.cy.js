@@ -1,6 +1,6 @@
 import LoginPage from "../pages/loginPage";
 import AccountPage from "../pages/accountPage"
-import {MOUNTFAILED,TRASACTIONFAILED,TRASACTIONSUCCESSFUL,DEPOSITSUCCESSFUL,CUSTOMERLOGIN,USER_RON, DEPOSIT, MOUNTDEPOSIT,WITHDRAWL,MOUNTWITHDRAWL,URL,URLACCOUNT,ACCOUNTRON2,ACCOUNTRON3} from "../variables/variable"
+import {TRASACTIONS,MOUNTFAILED,TRASACTIONFAILED,TRASACTIONSUCCESSFUL,DEPOSITSUCCESSFUL,CUSTOMERLOGIN,USER_RON, DEPOSIT, MOUNTDEPOSIT,WITHDRAWL,MOUNTWITHDRAWL,URL,URLACCOUNT,ACCOUNTRON2,ACCOUNTRON3} from "../variables/variable"
 
 describe('TEST con usuario Ron', () => {
     const loginPage = new LoginPage();
@@ -19,7 +19,9 @@ describe('TEST con usuario Ron', () => {
         accountPage.clickAmount(MOUNTWITHDRAWL);
         accountPage.clickBtnSubmit();
         accountPage.assertTransactionSuccessful(TRASACTIONSUCCESSFUL);
-       
+        cy.reload();
+        accountPage.clickButtonByText(TRASACTIONS);
+        accountPage.clickReset();
     });
     it('TEST de cambio de cuenta de Ron POUND', () => {
         loginPage.visit(URLACCOUNT);
@@ -36,6 +38,9 @@ describe('TEST con usuario Ron', () => {
         accountPage.clickAmount(MOUNTWITHDRAWL);
         accountPage.clickBtnSubmit();
         accountPage.assertTransactionSuccessful(TRASACTIONSUCCESSFUL);
+        cy.reload();
+        accountPage.clickButtonByText(TRASACTIONS);
+        accountPage.clickReset();
     });
     it('TEST de cambio de cuenta de Ron RUPEE', () => {
         loginPage.visit(URLACCOUNT);
@@ -52,6 +57,9 @@ describe('TEST con usuario Ron', () => {
         accountPage.clickAmount(MOUNTWITHDRAWL);
         accountPage.clickBtnSubmit();
         accountPage.assertTransactionSuccessful(TRASACTIONSUCCESSFUL);
+        cy.reload();
+        accountPage.clickButtonByText(TRASACTIONS);
+        accountPage.clickReset();
     });
     it('TEST para validar que el retiro no sea mayor al deposito', () => {
         loginPage.visit(URL);

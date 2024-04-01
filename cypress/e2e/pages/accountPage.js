@@ -23,6 +23,8 @@ class AccountPage {
       assertTransactionFailed(failed){
         cy.get('.error').should('have.text', failed);
       }
-      
+      clickReset(){
+        cy.get('[style="float:right;margin-top:-30px;"]').click()
+      }
 }
 export default AccountPage;  

@@ -1,6 +1,6 @@
 import LoginPage from "../pages/loginPage";
 import AccountPage from "../pages/accountPage"
-import {MOUNTFAILED,TRASACTIONFAILED,TRASACTIONSUCCESSFUL,DEPOSITSUCCESSFUL,CUSTOMERLOGIN,USER_NEVILLE, DEPOSIT, MOUNTDEPOSIT,WITHDRAWL,MOUNTWITHDRAWL,URL,URLACCOUNT,ACCOUNTNEVILLE2,ACCOUNTNEVILLE3} from "../variables/variable"
+import {TRASACTIONS,MOUNTFAILED,TRASACTIONFAILED,TRASACTIONSUCCESSFUL,DEPOSITSUCCESSFUL,CUSTOMERLOGIN,USER_NEVILLE, DEPOSIT, MOUNTDEPOSIT,WITHDRAWL,MOUNTWITHDRAWL,URL,URLACCOUNT,ACCOUNTNEVILLE2,ACCOUNTNEVILLE3} from "../variables/variable"
 
 describe('TEST con usuario Neville', () => {
     const loginPage = new LoginPage();
@@ -19,6 +19,9 @@ describe('TEST con usuario Neville', () => {
         accountPage.clickAmount(MOUNTWITHDRAWL);
         accountPage.clickBtnSubmit(); 
         accountPage.assertTransactionSuccessful(TRASACTIONSUCCESSFUL);
+        cy.reload();
+        accountPage.clickButtonByText(TRASACTIONS);
+        accountPage.clickReset();
     });
     it('TEST de cambio de cuenta de Neville POUND', () => {
         loginPage.visit(URLACCOUNT);
@@ -35,6 +38,9 @@ describe('TEST con usuario Neville', () => {
         accountPage.clickAmount(MOUNTWITHDRAWL);
         accountPage.clickBtnSubmit();
         accountPage.assertTransactionSuccessful(TRASACTIONSUCCESSFUL);
+        cy.reload();
+        accountPage.clickButtonByText(TRASACTIONS);
+        accountPage.clickReset();
     });
     it('TEST de cambio de cuenta de Neville RUPEE', () => {
         loginPage.visit(URLACCOUNT);
@@ -51,6 +57,9 @@ describe('TEST con usuario Neville', () => {
         accountPage.clickAmount(MOUNTWITHDRAWL);
         accountPage.clickBtnSubmit();
         accountPage.assertTransactionSuccessful(TRASACTIONSUCCESSFUL);
+        cy.reload();
+        accountPage.clickButtonByText(TRASACTIONS);
+        accountPage.clickReset();
     });
     it('TEST para validar que el retiro no sea mayor al deposito', () => {
         loginPage.visit(URL);
