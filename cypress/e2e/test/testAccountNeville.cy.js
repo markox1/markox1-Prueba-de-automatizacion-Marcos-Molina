@@ -2,7 +2,7 @@ import LoginPage from "../pages/loginPage";
 import AccountPage from "../pages/accountPage"
 import {TRASACTIONS,MOUNTFAILED,TRASACTIONFAILED,TRASACTIONSUCCESSFUL,DEPOSITSUCCESSFUL,CUSTOMERLOGIN,USER_NEVILLE, DEPOSIT, MOUNTDEPOSIT,WITHDRAWL,MOUNTWITHDRAWL,URL,URLACCOUNT,ACCOUNTNEVILLE2,ACCOUNTNEVILLE3} from "../variables/variable"
 
-describe('TEST con usuario Neville', () => {
+describe('TEST con usuario Neville, se realizan pruebas depositos y retiros además que se resetea en transacción', () => {
     const loginPage = new LoginPage();
     const accountPage= new AccountPage();
     it('TEST  de login con Neville cuenta Dolares', () => {

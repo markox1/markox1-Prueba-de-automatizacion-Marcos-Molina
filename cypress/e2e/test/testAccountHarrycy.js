@@ -2,7 +2,7 @@ import LoginPage from "../pages/loginPage";
 import AccountPage from "../pages/accountPage"
 import {TRASACTIONS,MOUNTFAILED,TRASACTIONFAILED,TRASACTIONSUCCESSFUL,DEPOSITSUCCESSFUL,CUSTOMERLOGIN,USER_HARRY, DEPOSIT, MOUNTDEPOSIT,WITHDRAWL,MOUNTWITHDRAWL,URL,URLACCOUNT,ACCOUNTHARRY2,ACCOUNTHARRY3, USER_HERMOINE} from "../variables/variable"
 
-describe('TEST con usuario Harry', () => {
+describe('TEST con usuario Harry, se realizan pruebas depositos y retiros además que se resetea en transacción', () => {
     const loginPage = new LoginPage();
     const accountPage= new AccountPage();
     it('TEST  de login con Harry cuenta Dolares', () => {

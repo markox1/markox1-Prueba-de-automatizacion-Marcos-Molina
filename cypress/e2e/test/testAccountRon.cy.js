@@ -2,7 +2,7 @@ import LoginPage from "../pages/loginPage";
 import AccountPage from "../pages/accountPage"
 import {TRASACTIONS,MOUNTFAILED,TRASACTIONFAILED,TRASACTIONSUCCESSFUL,DEPOSITSUCCESSFUL,CUSTOMERLOGIN,USER_RON, DEPOSIT, MOUNTDEPOSIT,WITHDRAWL,MOUNTWITHDRAWL,URL,URLACCOUNT,ACCOUNTRON2,ACCOUNTRON3} from "../variables/variable"
 
-describe('TEST con usuario Ron', () => {
+describe('TEST con usuario Ron, se realizan pruebas depositos y retiros además que se resetea en transacción', () => {
     const loginPage = new LoginPage();
     const accountPage= new AccountPage();
     it('TEST  de login con Ron cuenta Dolares', () => {

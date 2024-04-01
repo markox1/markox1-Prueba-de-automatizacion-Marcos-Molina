@@ -2,7 +2,7 @@ import LoginPage from "../pages/loginPage";
 import AccountPage from "../pages/accountPage"
 import {TRASACTIONS,MOUNTFAILED,TRASACTIONFAILED,TRASACTIONSUCCESSFUL,DEPOSITSUCCESSFUL,CUSTOMERLOGIN,USER_ALBUS, DEPOSIT, MOUNTDEPOSIT,WITHDRAWL,MOUNTWITHDRAWL,URL,URLACCOUNT,ACCOUNTALBUS2,ACCOUNTALBUS3} from "../variables/variable"
 import { format } from 'date-fns'
-describe('TEST con usuario Albus', () => {
+describe('TEST con usuario Albus, se realizan pruebas depositos y retiros además que se resetea en transacción', () => {
     const loginPage = new LoginPage();
     const accountPage= new AccountPage();
  
