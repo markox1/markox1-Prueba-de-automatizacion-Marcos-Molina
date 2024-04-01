@@ -30,7 +30,7 @@ export const DELETECUSTOMER="Customers";
 export const TRASACTIONSUCCESSFUL="Transaction successful";
 export const DEPOSITSUCCESSFUL="Deposit Successful";
 export const TRASACTIONFAILED="Transaction Failed. You can not withdraw amount more than the balance.";
-
+export const MOUNTFAILED=10000;
 
 
 

@@ -1,6 +1,6 @@
 import LoginPage from "../pages/loginPage";
 import AccountPage from "../pages/accountPage"
-import {TRASACTIONFAILED,TRASACTIONSUCCESSFUL,DEPOSITSUCCESSFUL,CUSTOMERLOGIN,USER_RON, DEPOSIT, MOUNTDEPOSIT,WITHDRAWL,MOUNTWITHDRAWL,URL,URLACCOUNT,ACCOUNTRON2,ACCOUNTRON3} from "../variables/variable"
+import {MOUNTFAILED,TRASACTIONFAILED,TRASACTIONSUCCESSFUL,DEPOSITSUCCESSFUL,CUSTOMERLOGIN,USER_RON, DEPOSIT, MOUNTDEPOSIT,WITHDRAWL,MOUNTWITHDRAWL,URL,URLACCOUNT,ACCOUNTRON2,ACCOUNTRON3} from "../variables/variable"
 
 describe('TEST con usuario Ron', () => {
     const loginPage = new LoginPage();
@@ -59,7 +59,7 @@ describe('TEST con usuario Ron', () => {
         loginPage.fillUsername(USER_RON);
         loginPage.clickLoginButton();
         accountPage.clickButtonByText(WITHDRAWL);
-        accountPage.clickAmount(MOUNTWITHDRAWL);
+        accountPage.clickAmount(MOUNTFAILED);
         accountPage.clickBtnSubmit();
         accountPage.assertTransactionFailed(TRASACTIONFAILED);     
     });
