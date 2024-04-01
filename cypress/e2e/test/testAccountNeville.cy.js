@@ -52,6 +52,15 @@ describe('TEST con usuario Neville', () => {
         accountPage.clickBtnSubmit();
         accountPage.assertTransactionSuccessful(TRASACTIONSUCCESSFUL);
     });
-    
+    it('TEST para validar que el retiro no sea mayor al deposito', () => {
+        loginPage.visit(URL);
+        loginPage.clickUserSelect(CUSTOMERLOGIN);
+        loginPage.fillUsername(USER_NEVILLE);
+        loginPage.clickLoginButton();
+        accountPage.clickButtonByText(WITHDRAWL);
+        accountPage.clickAmount(MOUNTWITHDRAWL);
+        accountPage.clickBtnSubmit();
+        accountPage.assertTransactionFailed(TRASACTIONFAILED);     
+    });
 })
 

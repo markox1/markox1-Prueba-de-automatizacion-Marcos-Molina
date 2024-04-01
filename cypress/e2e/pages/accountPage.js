@@ -20,6 +20,9 @@ class AccountPage {
       assertTransactionSuccessful(successfull){
         cy.get('.error').should('have.text', successfull);
       }
+      assertTransactionFailed(failed){
+        cy.get('.error').should('have.text', failed);
+      }
       
 }
 export default AccountPage;  

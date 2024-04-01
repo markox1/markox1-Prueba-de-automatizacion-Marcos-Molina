@@ -1,6 +1,6 @@
 import LoginPage from "../pages/loginPage";
 import AccountPage from "../pages/accountPage"
-import {TRASACTIONSUCCESSFUL,DEPOSITSUCCESSFUL,CUSTOMERLOGIN,USER_RON, DEPOSIT, MOUNTDEPOSIT,WITHDRAWL,MOUNTWITHDRAWL,URL,URLACCOUNT,ACCOUNTRON2,ACCOUNTRON3} from "../variables/variable"
+import {TRASACTIONFAILED,TRASACTIONSUCCESSFUL,DEPOSITSUCCESSFUL,CUSTOMERLOGIN,USER_RON, DEPOSIT, MOUNTDEPOSIT,WITHDRAWL,MOUNTWITHDRAWL,URL,URLACCOUNT,ACCOUNTRON2,ACCOUNTRON3} from "../variables/variable"
 
 describe('TEST con usuario Ron', () => {
     const loginPage = new LoginPage();
@@ -52,6 +52,16 @@ describe('TEST con usuario Ron', () => {
         accountPage.clickAmount(MOUNTWITHDRAWL);
         accountPage.clickBtnSubmit();
         accountPage.assertTransactionSuccessful(TRASACTIONSUCCESSFUL);
+    });
+    it('TEST para validar que el retiro no sea mayor al deposito', () => {
+        loginPage.visit(URL);
+        loginPage.clickUserSelect(CUSTOMERLOGIN);
+        loginPage.fillUsername(USER_RON);
+        loginPage.clickLoginButton();
+        accountPage.clickButtonByText(WITHDRAWL);
+        accountPage.clickAmount(MOUNTWITHDRAWL);
+        accountPage.clickBtnSubmit();
+        accountPage.assertTransactionFailed(TRASACTIONFAILED);     
     });
     
 })
