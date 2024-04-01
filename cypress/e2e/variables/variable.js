@@ -5,6 +5,7 @@ export const USER_ALBUS=4;
 export const USER_NEVILLE=5;
 export const USER_NEW=6;
 export const DEPOSIT="Deposit";
+export const TRASACTIONS="Transactions";
 export const MOUNTDEPOSIT=2000;
 export const WITHDRAWL="Withdrawl"
 export const MOUNTWITHDRAWL=500;
